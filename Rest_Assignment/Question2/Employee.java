@@ -1,4 +1,4 @@
-package com.example.Rest_Assignment.Rest_Assignment.Question1.Question2;
+package com.example.Rest_Assignment.Rest_Assignment.Question2;
 
 public class Employee {
     private Integer id;

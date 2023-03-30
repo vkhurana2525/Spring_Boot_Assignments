@@ -1,4 +1,4 @@
-package com.example.Rest_Assignment.Rest_Assignment.Question1.Question2;
+package com.example.Rest_Assignment.Rest_Assignment.Question2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
