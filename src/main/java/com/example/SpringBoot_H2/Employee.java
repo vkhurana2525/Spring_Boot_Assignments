@@ -1,3 +1,5 @@
+package com.example.SpringBoot_H2;
+
 import jakarta.persistence.*;
 
 import java.util.Objects;
@@ -14,12 +16,14 @@ public class Employee {
     private int age;
 
     public Employee(Long id,String name, int age) {
+        super();
         this.id = id;
         this.name = name;
         this.age = age;
     }
 
     public Employee() {
+        super();
     }
 
     public Long getId() {
