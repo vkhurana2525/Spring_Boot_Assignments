@@ -1,6 +1,7 @@
 package com.example.Rest_Assignment.Rest_Assignment.Question2;
 
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -34,7 +35,26 @@ public class EmployeeController {
         ed.save(emp);
     }
 
-//    @PutMapping("/employees/{id}")
-//    public
+    @PutMapping("/emps/{id}")
+    public ResponseEntity<Employee> updateEmployee(@PathVariable Integer id, @RequestBody Employee emp){
+        Employee e=ed.getEmployeeById(id);
+        e.setAge(emp.getAge());
+        e.setId(emp.getId());
+        e.setName(emp.getName());
+        final Employee updatedEmp=ed.save(e);
+        return ResponseEntity.ok(updatedEmp);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
