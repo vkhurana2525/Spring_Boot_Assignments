@@ -6,11 +6,9 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.hateoas.EntityModel;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
-
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Locale;
 
@@ -45,19 +43,12 @@ public class EmployeeController {
 
 //    1.Add support for Internationalization in your application allowing messages to be shown in English, German and Swedish, keeping English as default.
     @GetMapping("/employees-internationalized")
-    public String helloWorldInternationalised(){
+    public String helloWorldInternationalised(@RequestParam String username){
         Locale locale= LocaleContextHolder.getLocale();
-        return messageSource.getMessage("hello_sweden",null,"Default Message",locale);
-        /* here in parameters of getMessage we can whatever we have written in messages_ger.properties, we have to
-        specify key as parameter */
+        return messageSource.getMessage("hello.message",null,"Default Message",locale)+" "+username;
+
 
     }
-
-    //2.Create a GET request which takes "username" as param and shows a localized message "Hello Username". (Use parameters in message properties)
-//    @GetMapping("/employees")
-//    public String localized_message(@RequestParam String username){
-//        return "Hello "+username;
-//    }
     @DeleteMapping("/employees/{id}")
     public void deleteEmployeeById(@PathVariable Integer id){
        ed.deleteEmployeeById(id);
