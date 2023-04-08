@@ -1,14 +1,12 @@
-package com.example.JPA_Part2.inheritanceMapping.joined;
+package inheritanceMapping.tablePerClass;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Inheritance;
-import jakarta.persistence.InheritanceType;
+import jakarta.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
-public abstract class  Payment1 {
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+
+public abstract class  Payment {
     @Id
     private int id;
     private double amount;

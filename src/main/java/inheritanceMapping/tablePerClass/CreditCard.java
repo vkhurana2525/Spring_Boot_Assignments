@@ -1,7 +1,6 @@
-package com.example.JPA_Part2.inheritanceMapping.tablePerClass;
+package inheritanceMapping.tablePerClass;
 
 
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
 @Entity

@@ -1,10 +1,11 @@
-package com.example.JPA_Part2.inheritanceMapping.tablePerClass;
+package inheritanceMapping.joined;
 
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-public class Cheque extends Payment {
+@PrimaryKeyJoinColumn(name="id")
+public class Cheque1 extends Payment1 {
     private String chequeNumber;
 
     public String getCheque() {

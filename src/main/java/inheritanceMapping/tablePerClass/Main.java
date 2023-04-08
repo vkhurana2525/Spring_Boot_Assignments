@@ -1,4 +1,4 @@
-package com.example.JPA_Part2.inheritanceMapping.tablePerClass;
+package inheritanceMapping.tablePerClass;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

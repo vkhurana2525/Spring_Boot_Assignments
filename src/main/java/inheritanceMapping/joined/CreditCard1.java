@@ -1,4 +1,4 @@
-package com.example.JPA_Part2.inheritanceMapping.joined;
+package inheritanceMapping.joined;
 
 
 import jakarta.persistence.Entity;

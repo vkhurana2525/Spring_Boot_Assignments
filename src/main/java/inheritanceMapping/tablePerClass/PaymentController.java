@@ -1,4 +1,4 @@
-package com.example.JPA_Part2.inheritanceMapping.tablePerClass;
+package inheritanceMapping.tablePerClass;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
