@@ -9,8 +9,9 @@ public class Book {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "author_id", referencedColumnName = "id")
+    @JoinColumn(name = "author_id", referencedColumnName = "id")//this is basically setting foreign key
     Author author;
+
 
     private String bookName;
 
@@ -20,5 +21,13 @@ public class Book {
 
     public void setBookName(String bookName) {
         this.bookName = bookName;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 }
